@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <script src="getusers.js"></script> -->
+</head>
+
+<body>
+    <script>
+        const btn = document.getElementById("btnGetUsers");
+        const div = document.getElementById("divShowUsers");
+        btn.addEventListener('click', function (e) {
+            const response = await fetch('/users')
+                .then(res => {
+                    // console.log('res', res);
+                    if (!res.ok) {
+                        throw Error("Error fetching response!");
+                    }
+                    return res
+                });
+            const data = await response.json();
+            console.log("data");
+        })
+    </script>
+
+    <button id="btnGetUsers"> Get Users</button>
+    <div id="divShowUsers" style="border: 1px solid black;"> </div>
+</body>

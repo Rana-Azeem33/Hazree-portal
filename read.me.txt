@@ -1,0 +1,34 @@
+
+//This will give an understanding of the project..
+
+## ABOUT MAIN FILES:-
+. index.js - server side setup file
+
+>>public folder
+. index.html - client side .js script is also there inside <script> tag..
+
+>>src folder
+. DB.js - establishes connection with database (will import that to index.js..)
+
+>>model folder
+. user.model.js - define schema for collection in database (in our case- schema must be same as in Hazree code)
+
+>>router folder
+. user.route.js - mention all routes for collection Users (will import user.model here.. )
+
+---------------------------------------------------------------------------------------------------------------
+
+## HOW TO RUN?
+
+. Open new terminal, run command " npm install ".. this command might take some time but let it finish
+//this will install all required packages to your project
+
+. In cmd of windows.. run command " mongod " to start mongo shell  //if you're using mongodb atlas - connection method will be different
+
+*****
+Now, before running.. you must have a Hazree database.. and in that database a collection called 'users'
+Also data will only show.. if your 'users' collection has some data in it...
+and plus.. if the schema of data matches your schema in file 'user.model.js'  
+******
+
+. While mongo shell is still running... open new terminal in vscode and run command " npm start "
